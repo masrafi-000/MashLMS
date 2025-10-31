@@ -1,5 +1,6 @@
+import Logo from "@/components/shared/Logo";
 import { buttonVariants } from "@/components/ui/button";
-import { ArrowLeft, Code2Icon } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 
@@ -18,15 +19,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
       </Link>
 
       <div className="flex w-full max-w-sm flex-col gap-6">
-        <Link
-          href="/"
-          className="flex items-center gap-2 self-center font-semibold text-xl"
-        >
-          <span className="p-2 bg-red-600 rounded-xl shadow-2xl transition-all transform hover:scale-105">
-            <Code2Icon className="size-6" />
-          </span>
-          MashLMS.
-        </Link>
+        <Logo />
         {children}
 
         <div className="text-balance text-center text-xs text-muted-foreground">
